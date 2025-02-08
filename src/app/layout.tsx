@@ -15,6 +15,8 @@ const geistFont = Geist({
 	subsets: ['latin'],
 })
 
+// TODO: Viewport with color scheme
+
 export default function RootLayout({
 	children,
 }: Readonly<{
