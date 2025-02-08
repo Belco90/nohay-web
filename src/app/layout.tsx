@@ -46,7 +46,7 @@ export default function RootLayout({
 								href="https://mario.dev"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-foreground hover:underline transition-colors"
+								className="text-foreground underline hover:decoration-primary hover:text-primary transition-colors"
 							>
 								Mario
 							</a>
