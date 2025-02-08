@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist } from 'next/font/google'
 import type { ReactNode } from 'react'
 
@@ -11,11 +11,17 @@ export const metadata: Metadata = {
 	description: 'Muy pronto...',
 }
 
+export const viewport: Viewport = {
+	themeColor: [
+		{ media: '(prefers-color-scheme: light)', color: 'white' },
+		{ media: '(prefers-color-scheme: dark)', color: 'black' },
+	],
+	colorScheme: 'light dark',
+}
+
 const geistFont = Geist({
 	subsets: ['latin'],
 })
-
-// TODO: Viewport with color scheme
 
 export default function RootLayout({
 	children,
