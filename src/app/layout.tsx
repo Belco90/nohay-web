@@ -9,6 +9,10 @@ import { ThemeProvider } from '@/app/theme-provider'
 export const metadata: Metadata = {
 	title: 'No hay',
 	description: 'Muy pronto...',
+	openGraph: {
+		title: 'No hay',
+		description: 'Muy pronto...',
+	},
 }
 
 export const viewport: Viewport = {
