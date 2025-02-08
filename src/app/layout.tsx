@@ -38,20 +38,20 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					<ThemeToggle />
-					<div className="min-h-screen flex items-center justify-center bg-background text-foreground transition-colors">
-						{children}
+					<div className="h-full flex flex-col items-center justify-center bg-background text-foreground transition-colors">
+						<main className="flex-grow flex-shrink-0">{children}</main>
+						<footer className="w-full text-center text-sm text-muted-foreground py-2">
+							Creado por{' '}
+							<a
+								href="https://mario.dev"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-foreground hover:underline transition-colors"
+							>
+								Mario
+							</a>
+						</footer>
 					</div>
-					<footer className="fixed bottom-4 w-full text-center text-sm text-muted-foreground">
-						Creado por{' '}
-						<a
-							href="https://mario.dev"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="text-foreground hover:underline transition-colors"
-						>
-							Mario
-						</a>
-					</footer>
 				</ThemeProvider>
 			</body>
 		</html>
