@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Geist } from 'next/font/google'
 import type { ReactNode } from 'react'
 
 import './globals.css'
@@ -8,6 +9,10 @@ export const metadata: Metadata = {
 	description: 'Muy pronto...',
 }
 
+const geistFont = Geist({
+	subsets: ['latin'],
+})
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -15,7 +20,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="es">
-			<body className="antialiased">
+			<body className={`${geistFont.className} antialiased`}>
 				<div className="min-h-screen flex items-center justify-center bg-background text-foreground transition-colors">
 					{children}
 				</div>
